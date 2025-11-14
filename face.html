@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi UTBK Literasi Bahasa Inggris</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div id="login-page">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+
+        <div class="login-container">
+            <h2>Simulasi UTBK</h2>
+            <form id="login-form" class="login-form">
+                <input type="text" id="username" placeholder="username" required>
+                <input type="password" id="password" placeholder="password" required>
+                <p id="login-error" class="error-message" style="display: none;">Username atau Password salah.</p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="exam-page">
+        <div class="header">
+            <h1>Literasi Bahasa Inggris</h1>
+            <div id="timer" class="timer-box"></div> 
+        </div>
+
+        <div class="main-content">
+            <div class="question-area">
+                <div id="question-display">
+                    </div>
+                
+                <div class="controls">
+                    <div class="ragu-ragu-control">
+                        <button id="ragu-ragu-btn">Ragu-Ragu</button>
+                    </div>
+                    <div class="nav-buttons">
+                        <button id="prev-btn" style="display: none;">&lt; Kembali</button>
+                        <button id="next-btn">Lanjut &gt;</button>
+                    </div>
+                    <button id="finish-exam">Selesai</button>
+                </div>
+            </div>
+
+            <div class="sidebar-wrapper">
+                <div id="timer-container">
+                    <h4>Sisa Waktu Ujian</h4>
+                    <span id="timer-display">01:30:00</span>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Daftar Soal (1-30)</h3>
+                    <div id="question-nav-panel" class="question-nav-grid">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="result-page">
+        <div class="result-container">
+            <h2>🎉 Hasil Simulasi Anda 🎉</h2>
+            <p>Selamat, Anda telah menyelesaikan simulasi ujian Literasi Bahasa Inggris.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item stat-correct">
+                    <h4>Jawaban Benar</h4>
+                    <span id="result-correct" class="value">0</span>
+                </div>
+                <div class="stat-item stat-wrong">
+                    <h4>Jawaban Salah</h4>
+                    <span id="result-wrong" class="value">0</span>
+                </div>
+                <div class="stat-item stat-unanswered">
+                    <h4>Tidak Dijawab</h4>
+                    <span id="result-unanswered" class="value">0</span>
+                </div>
+            </div>
+            
+            <div class="time-info" id="time-spent-info">
+                Waktu pengerjaan: -
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
